@@ -5,6 +5,6 @@
         <title></title>
     </head>
     <body>
-        Primeiro commit com GIT
+        Primeiro commit com GIT.
     </body>
 </html>
