@@ -2,10 +2,9 @@
 
 // Iniciar sessão
 session_start();
-$usuarios = $_SESSION['usuarios'];
+$usuarios = isset( $_SESSION['usuarios'] ) ? $_SESSION['usuarios'] : array();
 
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,16 +31,21 @@ $usuarios = $_SESSION['usuarios'];
                 </thead>
                 <tbody>
                     <?php foreach ( $usuarios as $usuario ) : ?>
-                    <tr>
-                        <td><?php echo $usuario['cpf'] ?></td>
-                        <td><?php echo $usuario['nome'] ?></td>
-                        <td><?php echo $usuario['email'] ?></td>
-                        <td>
-                            <button class="btn btn-primary">Editar</button>
-                            <button class="btn btn-danger">Excluir</button>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td><?php echo $usuario['cpf'] ?></td>
+                            <td><?php echo $usuario['nome'] ?></td>
+                            <td><?php echo $usuario['email'] ?></td>
+                            <td>
+                                <button class="btn btn-primary">Editar</button>
+                                <button class="btn btn-danger">Excluir</button>
+                            </td>
+                        </tr>
                     <?php endforeach; ?>
+                    <?php if ( count($usuarios) == 0 ) : ?>
+                        <tr>
+                            <td colspan="4">Nenhum usuário cadastrado!</td>
+                        </tr>
+                    <?php endif; ?>
                 </tbody>
             </table>
         </div>
