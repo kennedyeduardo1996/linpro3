@@ -8,6 +8,7 @@ class UsuarioProcessa {
     public function __construct() {
     }
     
+    // Salvar usuários
     public function salvar() {
         // Armazenar usuario na variável
         $usuario = $_POST;
@@ -26,8 +27,8 @@ class UsuarioProcessa {
         header( 'Location: lista.php' );
     }
     
+    // Excluir usuários
     public function excluir() {
-        // Aqui vai o código para excluir
     }
     
 }
