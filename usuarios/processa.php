@@ -28,4 +28,5 @@ class UsuarioProcessa {
     
     public function excluir() {
     }
+    
 }
