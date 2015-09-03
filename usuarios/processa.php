@@ -27,6 +27,7 @@ class UsuarioProcessa {
     }
     
     public function excluir() {
+        // Aqui vai o código para excluir
     }
     
 }
