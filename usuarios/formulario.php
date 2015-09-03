@@ -6,10 +6,10 @@
     </head>
     <body>
         <h1>Cadastro de Usuários</h1>
-        <form action="processa.php" method="post">
+        <form action="processa.php?acao=salvar" method="post">
             E-mail: <input type="email" name="email" value=""><br><br>
-            Senha: <input type="password" name="senha" value=""><br><br>
-            CPF: <input type="text" name="cpf" value=""><br><br>
+            Senha: <input type="password" name="senha" value="" ><br><br>
+            CPF: <input type="text" name="cpf" value="" maxlength="11"><br><br>
             Nome: <input type="text" name="nome" value=""><br><br>
             CEP: <input type="text" name="cep" value=""><br><br>
             Endereço: <input type="text" name="endereco" value=""><br><br>
