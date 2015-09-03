@@ -36,8 +36,8 @@ $usuarios = isset( $_SESSION['usuarios'] ) ? $_SESSION['usuarios'] : array();
                             <td><?php echo $usuario['nome'] ?></td>
                             <td><?php echo $usuario['email'] ?></td>
                             <td>
-                                <button class="btn btn-primary">Editar</button>
-                                <button class="btn btn-danger">Excluir</button>
+                                <a href="formulario.php?cpf=<?php echo $usuario['cpf'] ?>" class="btn btn-primary">Editar</a>
+                                <a href="processa.php?acao=excluir" class="btn btn-danger">Excluir</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

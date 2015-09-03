@@ -1,3 +1,17 @@
+<?php
+
+// Desativar os erros do tipo NOTICE
+error_reporting( E_ALL ^ E_NOTICE );
+
+// Iniciar sessão
+session_start();
+
+// Pegar o usuário pelo CPF na sessão
+$cpf = $_GET['cpf'];
+$usuario = $_SESSION['usuarios'][$cpf];
+        
+print_r($usuario);
+?>
 <!DOCTYPE html>
 <html>
     <head>

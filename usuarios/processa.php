@@ -6,6 +6,10 @@ error_reporting( E_ALL ^ E_NOTICE );
 class UsuarioProcessa {
     
     public function __construct() {
+        if ( method_exists( $this, $_GET['acao'] ) )
+            call_user_func ( array($this, $_GET['acao']) );
+        else
+            die( "A ação <b>{$_GET['acao']}</b> não existe!" );
     }
     
     // Salvar usuários
@@ -29,6 +33,8 @@ class UsuarioProcessa {
     
     // Excluir usuários
     public function excluir() {
+        echo 'EXCLUIRRRRR!!!!!!!';
     }
     
 }
+new UsuarioProcessa();
