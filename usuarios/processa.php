@@ -33,15 +33,7 @@ class UsuarioProcessa {
     
     // Excluir usuários
     public function excluir() {
-        // Iniciar a sessão
-        session_start();
-        
-        // Remover usuário pelo cpf
-        $cpf = $_GET['cpf'];
-        unset( $_SESSION['usuarios'][$cpf] );
-        
-        // Redirecionar para a página lista.php
-        header( 'Location: lista.php' );
+        echo 'EXCLUIRRRRR!!!!!!!';
     }
     
 }
