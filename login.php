@@ -7,12 +7,24 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <form action="processa_login.php" method="post">
-            Usuário: <input type="text" name="usuario" id="usuario">
-            <br>
-            Senha: <input type="text" name="senha" id="senha">
-            <br>
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="container">
+            <div class="page-header">
+                <h1>Formulário de Login</h1>
+            </div>
+            <form action="processa_login.php" method="post">
+                <div>
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" class="form-control" name="usuario" id="usuario">
+                </div>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="text" class="form-control" name="senha" id="senha">
+                </div>
+                <br>
+                <p>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </p>
+            </form>
+        </div>
     </body>
 </html>
