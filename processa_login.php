@@ -37,7 +37,7 @@ class ProcessaLogin {
      */
     public function verificar_login( $usuario, $senha ) {
         $senha = $this->hash( $senha );
-        
+
         // Percorre o vetor logins
         foreach ( $this->logins as $login ) {
             
