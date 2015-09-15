@@ -41,6 +41,7 @@ $usuarios = isset( $_SESSION['usuarios'] ) ? $_SESSION['usuarios'] : array();
                             </td>
                         </tr>
                     <?php endforeach; ?>
+                        <!--count é igual o strlen mais funciona para array-->
                     <?php if ( count($usuarios) == 0 ) : ?>
                         <tr>
                             <td colspan="4">Nenhum usuário cadastrado!</td>
